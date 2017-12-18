@@ -1,6 +1,6 @@
 # SineWaveWebPage
 
-## A simple website generating sine wave project made for university.
+## A simple web page project made for university.
 Technologies used:
  - HTML5,
  - JavaScript,
