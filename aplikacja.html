@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Fala sinusoidalna</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="sinus.js"></script>
+</head>
+
+<body onload="draw();">
+    <header>
+        <h1>Fala sinusoidalna</h1>
+    </header>
+    <nav>
+        <table>
+            <tr>
+                <td>
+                    <a href="index.html">Menu</a>
+                </td>
+                <td>
+                    <h4>Symulacja</h4>
+                </td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <div id = "input">
+            A:
+            <br>
+            <input type="number" step=any id="A" value=1 />
+            <br> f:
+            <br>
+            <input type="number" step=any id="f" value=1 />
+            <br> φ:
+            <br>
+            <input type="number" step=any id="phase" value=0 />
+            <br>
+            <br>            
+            <input type="button" value="Narysuj" onclick="stopAnimate()">
+            <input type="button" value="Animuj" onclick="startAnimate()">
+            <br>
+            <br>
+        </div>
+        <div>
+            <canvas id="canvas" width="800" height="500"></canvas>
+        </div>
+
+    </main>
+    <footer>
+        <h4>Paweł Hadam - 2017</h4>
+    </footer>
+</body>
+
+</html>

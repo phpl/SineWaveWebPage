@@ -1,0 +1,80 @@
+body {
+    background-image: url("spiration-light.png");
+}
+
+header {
+    background-image: url("spiration dark.png");
+    width: auto;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    font-variant: small-caps;
+    font-weight: 100;
+    line-height: 5px;
+    color: white
+}
+
+h2 {
+    text-align: center;
+}
+
+h4 {
+    color: white
+}
+
+p {
+    text-indent: 15px;
+    padding:3px;
+}
+
+main {
+    text-align: center;
+    margin: 10px;
+}
+
+footer {
+    background-image: url("spiration dark.png");
+    text-align:center;
+    padding: 10px
+}
+
+nav {
+    background-image: url("spiration dark.png");
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size:20px;
+}
+
+th, td {
+    text-align: center;
+    width: 50%
+}
+
+a {
+    text-decoration: none;
+    color:white
+}
+
+a:hover {
+    color: grey
+}
+
+article {
+    text-align:left;
+}
+
+form ul {
+    text-align: center;
+}
+
+canvas {
+    margin:auto;
+    display: block;
+    border: solid gray;
+}
