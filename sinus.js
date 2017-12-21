@@ -2,6 +2,7 @@ var step = 0;
 var width = 0;
 var height = 0;
 var animate = false;
+var worker;
 
 function drawAxes(ctx) {
     ctx.strokeStyle = "gray";
@@ -70,7 +71,7 @@ function draw() {
     drawAxes(context);
     drawSine(context, step);
 
-    if (animate) {
+    if (animate == true) {
         step += 1;
         window.requestAnimationFrame(draw);
     }
@@ -78,10 +79,36 @@ function draw() {
 
 function stopAnimate() {
     animate = false;
+    if (typeof (worker) != "undefined") {
+        stopWorker();
+    }
     draw();
 }
 
 function startAnimate() {
-    animate = true;
-    draw();
+    if (animate == false) {
+        animate = true;
+        startWorker();
+        draw();
+    }
+}
+
+function startWorker() {
+    if (typeof (Worker) !== "undefined") {
+        if (typeof (worker) == "undefined") {
+            worker = new Worker("counterWorker.js");
+
+            worker.onmessage = function (event) {
+                document.getElementById("animationTime").innerHTML = "Czas animacji [s] - WebWorker: " + event.data;
+            }
+        }
+    } else {
+        document.getElementById("animationTime").innerHTML = "Twoja przegladarka nie wspiera Web Workerow!";
+    }
+}
+
+function stopWorker() {
+    worker.terminate();
+    worker = undefined;
+    document.getElementById("animationTime").innerHTML = "Czas animacji [s] - WebWorker: 0";
 }

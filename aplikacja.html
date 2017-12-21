@@ -12,11 +12,12 @@
     <header>
         <h1>Fala sinusoidalna</h1>
     </header>
+
     <nav>
         <table>
             <tr>
                 <td>
-                    <a href="index.html">Menu</a>
+                    <a href="index.html">Opis zagadnienia</a>
                 </td>
                 <td>
                     <h4>Symulacja</h4>
@@ -26,7 +27,7 @@
     </nav>
 
     <main>
-        <div id = "input">
+        <div id="input">
             A:
             <br>
             <input type="number" step=any id="A" value=1 />
@@ -37,17 +38,21 @@
             <br>
             <input type="number" step=any id="phase" value=0 />
             <br>
-            <br>            
+            <br>
             <input type="button" value="Narysuj" onclick="stopAnimate()">
             <input type="button" value="Animuj" onclick="startAnimate()">
             <br>
+            <br>
+            <h5>
+                <output id="animationTime">Czas animacji [s] - WebWorker: 0</output>
+            </h5>
             <br>
         </div>
         <div>
             <canvas id="canvas" width="800" height="500"></canvas>
         </div>
-
     </main>
+
     <footer>
         <h4>Paweł Hadam - 2017</h4>
     </footer>
